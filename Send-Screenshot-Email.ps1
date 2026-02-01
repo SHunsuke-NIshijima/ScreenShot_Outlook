@@ -1,6 +1,16 @@
 ﻿Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
+# DPI対応: アプリケーションをDPI Awareに設定
+Add-Type @"
+using System.Runtime.InteropServices;
+public class DpiHelper {
+    [DllImport("user32.dll")]
+    public static extern bool SetProcessDPIAware();
+}
+"@
+[DpiHelper]::SetProcessDPIAware()
+
 $scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 $configPath = Join-Path $scriptPath "config.json"
 $config = Get-Content $configPath -Raw -Encoding UTF8 | ConvertFrom-Json
