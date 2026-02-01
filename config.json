@@ -1,5 +1,9 @@
 ﻿{
-  "name": "",
-  "mailto": "",
-  "cc": ""
+  "name": "西島駿介",
+  "mailto": "shunsan1108@gmail.com",
+  "cc": "shunsan1108@gmail.com",
+  "subject": "【業務連絡】{name}_{date}",
+  "body": "【業務連絡】",
+  "selectionBorderColor": "Cyan",
+  "shortCutKey": "CTRL+ALT+S"
 }
